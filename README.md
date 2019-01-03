@@ -13,9 +13,13 @@ Admins will be able to add a taco consumption event and view the list of users a
 ### Built with
 
 React
+
 Redux
+
 Node
+
 Express
+
 Massive
 
 ### License
