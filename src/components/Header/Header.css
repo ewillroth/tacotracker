@@ -1,0 +1,30 @@
+.Header {
+	background: #AD2E24;
+	height: 10%;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 10px;
+}
+
+.titlebox, .admincontrols{
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.admincontrols {
+	width: 33%;
+	justify-content: space-evenly;
+}
+
+ .usercontrols {
+	 display: flex;
+	 flex-direction: column;
+	 height: 100%;
+	 justify-content: space-evenly;
+ }
+
+.titlebox img {
+	height: 80%;
+}
