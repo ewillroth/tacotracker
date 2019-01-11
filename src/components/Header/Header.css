@@ -5,6 +5,10 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0px 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 .titlebox, .admincontrols{
@@ -27,4 +31,5 @@
 
 .titlebox img {
 	height: 80%;
+	margin: 0px 5px;
 }

@@ -2,3 +2,10 @@
 	height: 100vh;
 	width: 100vw;
 }
+.container {
+	position: relative;
+	top: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

@@ -8,10 +8,11 @@ const app = express();
 
 
 massive(process.env.CONNECTION_STRING)
-	.then(db => {
-		app.set('db', db);
-		console.log('database connected');
+.then(db => { 
+	app.set('db', db);
+	console.log('database connected');
 	})
+.catch(err=>console.log(err))
 
 app.use(json())
 

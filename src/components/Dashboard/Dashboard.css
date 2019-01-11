@@ -1,0 +1,219 @@
+.Dashboard-container {
+	position: relative;
+	top: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Dashboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid 2px #D5DFE5;
+	width: 40%;
+	margin: 10px 0px;
+	padding: 10px 0px;
+}
+
+.Dashboard img {
+	width: 200px;
+	border-radius: 50%;
+	border: 2px solid #D5DFE5;
+}
+
+.description, .from, #rating, #quantity{
+	padding: 12px;
+}
+
+.Dashboard p {
+	border-bottom: 2px solid #00B2CA;
+}
+
+/* STAR RATING SYSTEM */
+.star {
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+}
+#rating {
+	display: flex;
+}
+/* 1 star rating */
+.rating1 #star1{
+	background-image: url('../../images/star.png');
+}
+.rating1 #star2{
+	background-image: url('../../images/emptystar.png');
+}
+.rating1 #star3{
+	background-image: url('../../images/emptystar.png');
+}
+.rating1 #star4{
+	background-image: url('../../images/emptystar.png');
+}
+.rating1 #star5{
+	background-image: url('../../images/emptystar.png');
+}
+
+/* 2 star rating */
+.rating2 #star1{
+	background-image: url('../../images/star.png');
+}
+.rating2 #star2{
+	background-image: url('../../images/star.png');
+}
+.rating2 #star3{
+	background-image: url('../../images/emptystar.png');
+}
+.rating2 #star4{
+	background-image: url('../../images/emptystar.png');
+}
+.rating2 #star5{
+	background-image: url('../../images/emptystar.png');
+}
+/* 3 star rating */
+.rating3 #star1{
+	background-image: url('../../images/star.png');
+}
+.rating3 #star2{
+	background-image: url('../../images/star.png');
+}
+.rating3 #star3{
+	background-image: url('../../images/star.png');
+}
+.rating3 #star4{
+	background-image: url('../../images/emptystar.png');
+}
+.rating3 #star5{
+	background-image: url('../../images/emptystar.png');
+}
+/* 4 star rating */
+.rating4 #star1{
+	background-image: url('../../images/star.png');
+}
+.rating4 #star2{
+	background-image: url('../../images/star.png');
+}
+.rating4 #star3{
+	background-image: url('../../images/star.png');
+}
+.rating4 #star4{
+	background-image: url('../../images/star.png');
+}
+.rating4 #star5{
+	background-image: url('../../images/emptystar.png');
+}
+/* 5 star rating */
+.rating5 #star1{
+	background-image: url('../../images/star.png');
+}
+.rating5 #star2{
+	background-image: url('../../images/star.png');
+}
+.rating5 #star3{
+	background-image: url('../../images/star.png');
+}
+.rating5 #star4{
+	background-image: url('../../images/star.png');
+}
+.rating5 #star5{
+	background-image: url('../../images/star.png');
+}
+
+/* QUANTITY SYSTEM */
+.taco {
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+}
+#quantity {
+	display: flex;
+}
+/* 1 taco */
+.quantity1 #taco1{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity1 #taco2{
+	display: none;
+}
+.quantity1 #taco3{
+	display: none;
+}
+.quantity1 #taco4{
+	display: none;
+}
+.quantity1 #taco5{
+	display: none;
+}
+
+/* 2 tacos */
+.quantity2 #taco1{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity2 #taco2{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity2 #taco3{
+	display: none;
+}
+.quantity2 #taco4{
+	display: none;
+}
+.quantity2 #taco5{
+	display: none;
+}
+
+/* 3 tacos */
+.quantity3 #taco1{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity3 #taco2{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity3 #taco3{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity3 #taco4{
+	display: none;
+}
+.quantity3 #taco5{
+	display: none;
+}
+
+/* 4 tacos */
+.quantity4 #taco1{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity4 #taco2{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity4 #taco3{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity4 #taco4{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity4 #taco5{
+	display: none;
+}
+
+/* 5 tacos */
+.quantity5 #taco1{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity5 #taco2{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity5 #taco3{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity5 #taco4{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+.quantity5 #taco5{
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
+}
+

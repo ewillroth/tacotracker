@@ -7,10 +7,10 @@ import Addtacos from './components/Addtacos/Addtacos'
 
 export default (
 	<Switch>
-		<Route exact path="/" component={Dashboard}></Route>
 		<Route path="/newuser" component={Newuser}></Route>
 		<Route path="/userpage" component={Userpage}></Route>
 		<Route path="/addtacos" component={Addtacos}></Route>
+		<Route path="/" component={Dashboard}></Route>
 	</Switch>
 );
 
