@@ -22,7 +22,7 @@ class Dashboard extends Component {
 
 	componentDidMount(){
 		axios.get('/api/tacos')
-		.then(response=>console.log(response.data)||this.setState({tacos:response.data}))
+		.then(response=>this.setState({tacos:response.data}))
 		.catch(err=>console.log(err))
 	}
 
