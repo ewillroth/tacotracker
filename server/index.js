@@ -28,6 +28,7 @@ app.use(
 );
 
 app.get('/api/tacos', controller.displayTacos)
+app.get('/api/tacocount', controller.countTacos)
 app.post('/api/tacos', controller.addTacos)
 app.put('/api/tacos', controller.editTacos)
 app.delete('/api/tacos', controller.deleteTacos)

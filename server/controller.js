@@ -20,9 +20,16 @@ const deleteTacos = (req,res,next) => {
 	.catch(err => console.log(err))
 }
 
+const countTacos = (req,res,next) => {
+	req.app.get('db').countTacos()
+	.then(response=>console.log(response)||res.status(200).json(response))
+	.catch(err=>console.log(err))
+}
+
 module.exports = {
 	addTacos,
 	displayTacos,
 	editTacos,
-	deleteTacos
+	deleteTacos,
+	countTacos
 };
