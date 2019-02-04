@@ -18,11 +18,16 @@ class Header extends Component{
 	}
 	//return three different views depending on req.session (no user, user, admin)
 	render(){
+		const today = new Date();
+		const day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
 		return (
 			//admin view
 			<div className="Header">
 				<div className="titlebox">
-					<img src="https://image.flaticon.com/icons/svg/579/579028.svg" alt="taco"></img>
+					<img
+						src="https://image.flaticon.com/icons/svg/579/579028.svg"
+						alt="taco"
+					/>
 					<Link to="/">Taco Tracker</Link>
 				</div>
 				<div className="admincontrols">
@@ -31,11 +36,11 @@ class Header extends Component{
 				</div>
 				<div className="usercontrols">
 					<h3>Username</h3>
-					<h3>Day of the year</h3>
-					<h3>Taco Count</h3>
+					<h3>Day of the year: {day}</h3>
+					<h3>Taco Count: {this.state.count}</h3>
 				</div>
 			</div>
-		)
+		);
 	}
 }
 

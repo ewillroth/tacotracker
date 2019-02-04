@@ -6,7 +6,6 @@ const massive = require('massive')
 const controller = require('./controller')
 const app = express();
 
-
 massive(process.env.CONNECTION_STRING)
 .then(db => { 
 	app.set('db', db);
