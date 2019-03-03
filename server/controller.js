@@ -22,7 +22,7 @@ const deleteTacos = (req,res,next) => {
 
 const countTacos = (req,res,next) => {
 	req.app.get('db').countTacos()
-	.then(response=>console.log(response)||res.status(200).json(response))
+	.then(response=>res.status(200).json(response))
 	.catch(err=>console.log(err))
 }
 
