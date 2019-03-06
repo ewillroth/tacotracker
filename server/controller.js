@@ -1,6 +1,6 @@
 
 const addTacos = (req,res,next) => {
-	req.app.get("db").addTacos([req.body.quantity, +req.body.rating, req.body.description, req.body.pic, req.body.source])
+	req.app.get("db").addTacos([req.body.quantity, +req.body.rating, req.body.description, req.body.source])
 	.then(response => res.status(200).json(response))
 	.catch(err => console.log(err))
 }
@@ -10,7 +10,7 @@ const displayTacos = (req,res,next) => {
 	.catch(err => console.log(err))
 }
 const editTacos = (req,res,next) => {
-	req.app.get("db").editTacos([req.body.id, req.body.quantity, req.body.rating, req.body.description, req.body.pic, req.body.source])
+	req.app.get("db").editTacos([req.body.id, req.body.quantity, req.body.rating, req.body.description, req.body.source])
 	.then(response => res.status(200).json(response))
 	.catch(err => console.log(err))
 }
