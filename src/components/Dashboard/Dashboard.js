@@ -94,7 +94,7 @@ class Dashboard extends Component {
 					</>
 					:	//edit toggled off
 					<>
-						<p className="label">Number of tacos</p>
+						{/* <p className="label">Number of tacos</p> */}
 						<div className={"quantity" + taco.quantity} id="quantity">
 							<div className="taco" id="taco1" />
 							<div className="taco" id="taco2" />
@@ -102,7 +102,7 @@ class Dashboard extends Component {
 							<div className="taco" id="taco4" />
 							<div className="taco" id="taco5" />
 						</div>
-						<p className="label">Rating</p>
+						{/* <p className="label">Rating</p> */}
 						<div className={"rating" + taco.rating} id="rating">
 							<div className="star" id="star1" />
 							<div className="star" id="star2" />
@@ -110,9 +110,9 @@ class Dashboard extends Component {
 							<div className="star" id="star4" />
 							<div className="star" id="star5" />
 						</div>
-						<p className="label">Description</p>
+						{/* <p className="label">Description</p> */}
 						<div className="description">{taco.description}</div>
-						<p className="label">From</p>
+						{/* <p className="label">From</p> */}
 						<div className="from">{taco.source}</div>
 						<button onClick={()=>this.toggleEdit(i)}>Edit</button>
 					</>

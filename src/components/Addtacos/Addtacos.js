@@ -10,13 +10,8 @@ class Addtacos extends Component {
 			quantity: 0,
 			source: '',
 			description: '',
-			pic: '',
 			rating: ''
 		}
-	}
-
-	addFile = (e) => {
-		this.setState({ pic: e.target.files[0] })
 	}
 
 	onChange = (e) => {
@@ -25,22 +20,14 @@ class Addtacos extends Component {
 
 	onSubmit = (e) => {
 		e.preventDefault()
-		const upload = storage.ref(`images/tacos/${this.state.quantity + this.state.source + this.state.description + this.state.rating}`).put(this.state.pic)
-		upload.on('state_changed', () => {}, (err) => console.log("upload error", err), () => {
-			storage.ref(`images/tacos/${this.state.quantity + this.state.source + this.state.description + this.state.rating}`).getDownloadURL()
-				.then(url => {
-					const {quantity, rating, description, source} = this.state
-					axios.post('/api/tacos', {quantity, rating, description, pic: url, source})
-						.then(response => this.setState({
-							quantity: 0,
-							source: '',
-							description: '',
-							pic: '',
-							rating: ''}))
-					.catch(err=>console.log(err))
-				})
-				.catch(err=>console.log(err))
-		})
+		const {quantity, rating, description, source} = this.state
+		axios.post('/api/tacos', {quantity, rating, description, source})
+			.then(response => this.setState({
+				quantity: 0,
+				source: '',
+				description: '',
+				rating: ''}))
+		.catch(err=>console.log(err))
 	}
 
 	render() {
@@ -53,8 +40,6 @@ class Addtacos extends Component {
 					<input name="source" onChange={this.onChange} value={this.state.source} type="text" required></input>
 					<p>Description</p>
 					<input name="description" onChange={this.onChange} value={this.state.description} type="text" required></input>
-					<p>Pic</p>
-					<input name="pic" onChange={this.addFile} type="file" required></input>
 					<p>Rating</p>
 					<input onChange={this.onChange} value={this.state.rating} type="range" min="1" max="5" name="rating" list="ratinglist" required></input>
 					<button>Submit</button>
