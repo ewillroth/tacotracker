@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import { storage } from '../../firebase'
 import "./Addtacos.css";
 
 class Addtacos extends Component {
