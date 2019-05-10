@@ -21,9 +21,15 @@ const deleteTacos = (req,res,next) => {
 }
 
 const countTacos = (req,res,next) => {
-	req.app.get('db').countTacos()
+	//get taco count for current user if there is one
+	//replace id with proper user_id on req.session.user once added
+	req.app.get('db').countTacos(req.session.user?req.session.user.id:0)
 	.then(response=>res.status(200).json(response))
 	.catch(err=>console.log(err))
+}
+
+const getUser = (req,res,next) => {
+	res.send(req.session.user?req.session.user:{name: 'guest'})
 }
 
 module.exports = {
@@ -31,5 +37,6 @@ module.exports = {
 	displayTacos,
 	editTacos,
 	deleteTacos,
-	countTacos
+	countTacos,
+	getUser
 };

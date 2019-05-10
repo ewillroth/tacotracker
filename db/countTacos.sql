@@ -1,1 +1,1 @@
-SELECT count(*) FROM tacos;
+SELECT count(*) FROM tacos WHERE user_id = $1
