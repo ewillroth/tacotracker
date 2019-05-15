@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import axios from 'axios'
+import AuthButton from '../AuthButton/AuthButton';
 import "./Header.css";
 
 class Header extends Component{
@@ -24,9 +25,8 @@ class Header extends Component{
 				.catch(err => console.log(err))
 		})
 		.catch(err=>console.log(err))
-
-
 	}
+
 	//return three different views depending on req.session (no user, user, admin)
 	render(){
 		const today = new Date();
@@ -43,12 +43,8 @@ class Header extends Component{
 					<Link to="/">Taco Tracker</Link>
 				</div>
 				<div className="auth">
-					<div className="login">
-						Log in
-					</div>
-					<div className="login">
-						Sign up
-					</div>
+					<AuthButton text={'Log In'}/>
+					<AuthButton text={'Sign Up'}/>
 				</div>
 			</div>
 			:

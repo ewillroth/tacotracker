@@ -13,4 +13,3 @@ export default (
 		<Route path="/" component={Dashboard}></Route>
 	</Switch>
 );
-
