@@ -11,7 +11,7 @@ const Login = () => {
 	return (
 		<div className="authModal">
 			<input name="email" onChange={captureTyping}></input>
-			<input name="password" onChange={captureTyping}></input>
+			<input type="password" name="password" onChange={captureTyping}></input>
 			<button>Log In</button>
 		</div>
 	)
