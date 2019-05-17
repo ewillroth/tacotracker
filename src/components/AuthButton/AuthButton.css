@@ -6,3 +6,10 @@
 	margin: 0 10px;
 	cursor: pointer;
 }
+
+/* Login and Register Components */
+.authModal {
+	height: 300px;
+	width: 300px;
+	background: red;
+}

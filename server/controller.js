@@ -19,7 +19,6 @@ const deleteTacos = (req,res,next) => {
 	.then(response => res.status(200).json(response))
 	.catch(err => console.log(err))
 }
-
 const countTacos = (req,res,next) => {
 	//get taco count for current user if there is one
 	//replace id with proper user_id on req.session.user once added
@@ -27,7 +26,6 @@ const countTacos = (req,res,next) => {
 	.then(response=>res.status(200).json(response))
 	.catch(err=>console.log(err))
 }
-
 const getUser = (req,res,next) => {
 	res.send(req.session.user?req.session.user:{name: 'guest'})
 }
