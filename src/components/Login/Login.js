@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Login = () => {
 
@@ -6,6 +7,14 @@ const Login = () => {
 
 	const captureTyping = (e) => {
 		updateInput({...input, [e.target.name]: e.target.value})
+	}
+
+	const handleClickLogin = () => {
+
+	}
+
+	const login = (email, password) => {
+		axios.post('/api/login')
 	}
 
 	return (
