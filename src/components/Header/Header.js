@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import axios from 'axios'
-import AuthButton from '../AuthButton/AuthButton';
-import Login from '../Login/Login'
-import Register from '../Register/Register'
 import "./Header.css";
 
 class Header extends Component{
@@ -11,8 +8,7 @@ class Header extends Component{
 		super()
 		this.state={
 			count: '',
-			user: '',
-			modal: 'none'
+			user: ''
 		}
 	}
 
@@ -30,17 +26,6 @@ class Header extends Component{
 		.catch(err=>console.log(err))
 	}
 	
-	//passed down to authButtons to toggle which authModal is active
-	toggleModal = (source) => {
-		if(source === "Sign Up" && this.state.modal !== 'register'){
-			this.setState({modal: 'register'})
-		} else if (source === "Log In" && this.state.modal !== 'login' ){
-			this.setState({modal: 'login'})
-		} else {
-			this.setState({modal:'none'})
-		} 
-	}
-
 	//return three different views depending on req.session (no user, user, admin)
 	render(){
 		const today = new Date();
@@ -56,14 +41,11 @@ class Header extends Component{
 					/>
 					<Link to="/">Taco Tracker</Link>
 				</div>
-				<div className="auth">
-					<AuthButton modal={this.modal} toggleModal={this.toggleModal} text={'Log In'}/>
-					<AuthButton modal={this.modal} toggleModal={this.toggleModal} text={'Sign Up'}/>
+				<div>
+					{
+						//firebase auth goes here
+					}
 				</div>
-				{this.state.modal === 'register' ? <Register/> 
-				: this.state.modal === 'login' ? <Login/>
-				: <></>
-				}
 			</div>
 			:
 			//user view
