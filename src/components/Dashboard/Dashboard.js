@@ -3,6 +3,8 @@ import './Dashboard.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { getTacos } from "../../redux/reducer";
+import Rating from '../Rating/Rating';
+import Quantity from '../Quantity/Quantity';
 
 class Dashboard extends Component {
 	constructor(){
@@ -95,21 +97,9 @@ class Dashboard extends Component {
 					:	//edit toggled off
 					<>
 						{/* <p className="label">Number of tacos</p> */}
-						<div className={"quantity" + taco.quantity} id="quantity">
-							<div className="taco" id="taco1" />
-							<div className="taco" id="taco2" />
-							<div className="taco" id="taco3" />
-							<div className="taco" id="taco4" />
-							<div className="taco" id="taco5" />
-						</div>
+						<Quantity quantity={taco.quantity} />
 						{/* <p className="label">Rating</p> */}
-						<div className={"rating" + taco.rating} id="rating">
-							<div className="star" id="star1" />
-							<div className="star" id="star2" />
-							<div className="star" id="star3" />
-							<div className="star" id="star4" />
-							<div className="star" id="star5" />
-						</div>
+						<Rating rating={taco.rating} />
 						{/* <p className="label">Description</p> */}
 						<div className="description">{taco.description}</div>
 						{/* <p className="label">From</p> */}
