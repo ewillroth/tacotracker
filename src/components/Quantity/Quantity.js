@@ -1,4 +1,5 @@
 import React from 'react';
+import './Quantity.css';
 
 const Quantity = props => {
 	return (
