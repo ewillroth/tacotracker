@@ -32,6 +32,7 @@ app.post('/api/tacos', controller.addTacos)
 app.put('/api/tacos', controller.editTacos)
 app.delete('/api/tacos', controller.deleteTacos)
 app.get('/api/user', controller.getUser)
-app.get('/api/login')
+app.put('/api/user', controller.updateUser)
+app.get('/api/logout', controller.logout)
 
 app.listen(process.env.PORT, console.log(`listening on port ${process.env.PORT}`))

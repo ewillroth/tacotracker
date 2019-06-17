@@ -30,11 +30,23 @@ const getUser = (req,res,next) => {
 	res.send(req.session.user?req.session.user:{name: 'guest'})
 }
 
+const updateUser = (req,res,next) => {
+	req.session.user = req.body.user
+	res.send(req.session.user)
+}
+
+const logout = (req,res,next) => {
+	req.session.destroy()
+	res.status(200).send('Logout successful')
+}
+
 module.exports = {
 	addTacos,
 	displayTacos,
 	editTacos,
 	deleteTacos,
 	countTacos,
-	getUser
+	getUser,
+	updateUser,
+	logout
 };
