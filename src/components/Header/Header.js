@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import firebase, {auth} from '../../firebase/index'
+import User from '../User/User'
 import axios from 'axios'
 import "./Header.css";
 
@@ -100,7 +101,7 @@ class Header extends Component{
 					<button onClick={this.logout}>Logout</button>
 				</div>
 				<div className="usercontrols">
-					<h3>{this.state.user.username}</h3>
+					<User user={this.state.user}/>
 					<h3>Day of the year: {day}</h3>
 					<h3>Taco Count: {this.state.count}</h3>
 				</div>
