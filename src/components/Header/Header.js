@@ -58,18 +58,12 @@ class Header extends Component{
 			console.log(response.data)
 			//store current user data in state
 			this.setState({user: response.data})
-			//get the taco count for the current user
-			axios.get('/api/tacocount')
-				.then(response => this.setState({ count: response.data[0].count }))
-				.catch(err => console.log(err))
 		})
 		.catch(err=>console.log(err))
 	}
 	
 	//return three different views depending on req.session (no user, user, admin)
 	render(){
-		const today = new Date();
-		const day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
 		return (
 			this.state.user.name === 'guest' ?
 			//no user view
@@ -102,8 +96,6 @@ class Header extends Component{
 				</div>
 				<div className="usercontrols">
 					<User user={this.state.user}/>
-					<h3>Day of the year: {day}</h3>
-					<h3>Taco Count: {this.state.count}</h3>
 				</div>
 			</div>
 		);
