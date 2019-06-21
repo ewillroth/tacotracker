@@ -9,7 +9,6 @@ const Rating = props => {
 	for (let i = 0; i<props.rating; i++){
 		display[i] = <div key={i} className="star" />
 	}
-
 	return (
 		<div className="rating">
 			{display}
