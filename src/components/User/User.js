@@ -7,9 +7,20 @@ const User = props => {
 	const [count, updateCount] = useState(0)
 	
 	const getTacoCount = () => {
-		axios.get('/api/tacocount')
+		const CancelToken = axios.CancelToken;
+		const source = CancelToken.source();
+
+		axios.get('/api/tacocount', {cancelToken: source.token})
 		.then(response => updateCount(response.data[0].count) )
-		.catch(err => console.log(err))
+		.catch(err => {
+			if(axios.isCancel(err)){
+				console.log('Request cancelled', err.message)
+			} else {
+				console.log(err)
+			}
+		})
+		
+		return () => {source.cancel('did not get taco count')}
 	}
 	
 	useEffect(getTacoCount, [])
