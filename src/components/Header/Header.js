@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
-import firebase, {auth} from '../../firebase/index'
+import firebase from '../../firebase/index'
 import User from '../User/User'
 import axios from 'axios'
 import "./Header.css";
@@ -19,7 +19,7 @@ class Header extends Component{
 		var provider = new firebase.auth.GoogleAuthProvider();
 		firebase.auth().signInWithPopup(provider).then(result => {
 			// This gives you a Google Access Token. You can use it to access the Google API.
-			var token = result.credential.accessToken;
+			// var token = result.credential.accessToken;
 			// The signed-in user info.
 			var user = result.user;
 
@@ -34,11 +34,11 @@ class Header extends Component{
 			// Handle Errors here.
 			var errorCode = error.code;
 			var errorMessage = error.message;
-			console.log(error.message);
+			console.log(errorCode, errorMessage);
 			// The email of the user's account used.
-			var email = error.email;
+			// var email = error.email;
 			// The firebase.auth.AuthCredential type that was used.
-			var credential = error.credential;
+			// var credential = error.credential;
 			// ...
 		});
 	}
@@ -55,7 +55,9 @@ class Header extends Component{
 	componentDidMount(){
 		axios.get('/api/user')
 		.then(response=>{
-			console.log(response.data)
+			if(response.data.name !== 'guest'){
+				console.log(response.data)
+			}
 			//store current user data in state
 			this.setState({user: response.data})
 		})

@@ -1,95 +1,12 @@
 
 /* QUANTITY SYSTEM */
-.taco {
+.quantityTaco {
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 30px;
 	height: 30px;
+	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
 }
-#quantity {
+.quantity {
 	display: flex;
-}
-/* 1 taco */
-.quantity1 #taco1{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity1 #taco2{
-	display: none;
-}
-.quantity1 #taco3{
-	display: none;
-}
-.quantity1 #taco4{
-	display: none;
-}
-.quantity1 #taco5{
-	display: none;
-}
-
-/* 2 tacos */
-.quantity2 #taco1{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity2 #taco2{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity2 #taco3{
-	display: none;
-}
-.quantity2 #taco4{
-	display: none;
-}
-.quantity2 #taco5{
-	display: none;
-}
-
-/* 3 tacos */
-.quantity3 #taco1{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity3 #taco2{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity3 #taco3{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity3 #taco4{
-	display: none;
-}
-.quantity3 #taco5{
-	display: none;
-}
-
-/* 4 tacos */
-.quantity4 #taco1{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity4 #taco2{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity4 #taco3{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity4 #taco4{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity4 #taco5{
-	display: none;
-}
-
-/* 5 tacos */
-.quantity5 #taco1{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity5 #taco2{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity5 #taco3{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity5 #taco4{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
-}
-.quantity5 #taco5{
-	background-image: url(https://image.flaticon.com/icons/svg/579/579028.svg);
 }
