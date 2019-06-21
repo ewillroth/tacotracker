@@ -5,88 +5,15 @@
 	background-repeat: no-repeat;
 	width: 30px;
 	height: 30px;
+	background-image: url('../../images/star.png');
 }
-#rating {
+.emptyStar {
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-image: url('../../images/emptystar.png');
+}
+.rating {
 	display: flex;
-}
-/* 1 star rating */
-.rating1 #star1{
-	background-image: url('../../images/star.png');
-}
-.rating1 #star2{
-	background-image: url('../../images/emptystar.png');
-}
-.rating1 #star3{
-	background-image: url('../../images/emptystar.png');
-}
-.rating1 #star4{
-	background-image: url('../../images/emptystar.png');
-}
-.rating1 #star5{
-	background-image: url('../../images/emptystar.png');
-}
-
-/* 2 star rating */
-.rating2 #star1{
-	background-image: url('../../images/star.png');
-}
-.rating2 #star2{
-	background-image: url('../../images/star.png');
-}
-.rating2 #star3{
-	background-image: url('../../images/emptystar.png');
-}
-.rating2 #star4{
-	background-image: url('../../images/emptystar.png');
-}
-.rating2 #star5{
-	background-image: url('../../images/emptystar.png');
-}
-/* 3 star rating */
-.rating3 #star1{
-	background-image: url('../../images/star.png');
-}
-.rating3 #star2{
-	background-image: url('../../images/star.png');
-}
-.rating3 #star3{
-	background-image: url('../../images/star.png');
-}
-.rating3 #star4{
-	background-image: url('../../images/emptystar.png');
-}
-.rating3 #star5{
-	background-image: url('../../images/emptystar.png');
-}
-/* 4 star rating */
-.rating4 #star1{
-	background-image: url('../../images/star.png');
-}
-.rating4 #star2{
-	background-image: url('../../images/star.png');
-}
-.rating4 #star3{
-	background-image: url('../../images/star.png');
-}
-.rating4 #star4{
-	background-image: url('../../images/star.png');
-}
-.rating4 #star5{
-	background-image: url('../../images/emptystar.png');
-}
-/* 5 star rating */
-.rating5 #star1{
-	background-image: url('../../images/star.png');
-}
-.rating5 #star2{
-	background-image: url('../../images/star.png');
-}
-.rating5 #star3{
-	background-image: url('../../images/star.png');
-}
-.rating5 #star4{
-	background-image: url('../../images/star.png');
-}
-.rating5 #star5{
-	background-image: url('../../images/star.png');
 }

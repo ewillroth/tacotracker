@@ -2,13 +2,17 @@ import React from 'react';
 import './Rating.css';
 
 const Rating = props => {
+	let display = []
+	for (let i=0; i<5; i++){
+		display.push(<div key={i} className="emptyStar"/>)
+	}
+	for (let i = 0; i<props.rating; i++){
+		display[i] = <div key={i} className="star" />
+	}
+
 	return (
-		<div className={"rating" + props.rating} id="rating">
-			<div className="star" id="star1" />
-			<div className="star" id="star2" />
-			<div className="star" id="star3" />
-			<div className="star" id="star4" />
-			<div className="star" id="star5" />
+		<div className="rating">
+			{display}
 		</div>
 
 	)
