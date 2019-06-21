@@ -3,8 +3,7 @@ import './Dashboard.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { getTacos } from "../../redux/reducer";
-import Rating from '../Rating/Rating';
-import Quantity from '../Quantity/Quantity';
+import TacoCard from '../TacoCard/TacoCard';
 
 class Dashboard extends Component {
 	constructor(){
@@ -95,17 +94,7 @@ class Dashboard extends Component {
 						</datalist>
 					</>
 					:	//edit toggled off
-					<>
-						{/* <p className="label">Number of tacos</p> */}
-						<Quantity quantity={taco.quantity} />
-						{/* <p className="label">Rating</p> */}
-						<Rating rating={taco.rating} />
-						{/* <p className="label">Description</p> */}
-						<div className="description">{taco.description}</div>
-						{/* <p className="label">From</p> */}
-						<div className="from">{taco.source}</div>
-						<button onClick={()=>this.toggleEdit(i)}>Edit</button>
-					</>
+					<TacoCard taco={taco} i={i} toggleEdit={this.toggleEdit}/>
 					}
 				</div>;
 		})
