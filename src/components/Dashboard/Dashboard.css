@@ -1,10 +1,3 @@
-.Dashboard-container {
-	position: relative;
-	top: 10%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
 .Dashboard {
 	display: flex;
@@ -14,22 +7,4 @@
 	width: 40%;
 	margin: 10px 0px;
 	padding: 10px 0px;
-}
-
-.Dashboard img {
-	width: 200px;
-	border-radius: 50%;
-	border: 2px solid #D5DFE5;
-}
-
-.description, .from, #rating, #quantity{
-	padding: 12px;
-}
-
-.Dashboard .label {
-	border-bottom: 2px solid #00B2CA;
-}
-
-button {
-	cursor: pointer;
 }

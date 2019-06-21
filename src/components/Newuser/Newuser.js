@@ -5,7 +5,7 @@ import "./Newuser.css";
 
 class Newuser extends Component {
 	render() {
-		return <div className="container">
+		return <div className="body">
 				<p>Name</p>
 				<input type="text" name="name" onChange={e => this.props.updateName(e.target.value)} />
 				<p>Username</p>

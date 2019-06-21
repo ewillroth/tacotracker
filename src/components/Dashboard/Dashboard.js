@@ -4,6 +4,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { getTacos } from "../../redux/reducer";
 import TacoCard from '../TacoCard/TacoCard';
+import EditTaco from '../EditTaco/EditTaco';
 
 class Dashboard extends Component {
 	constructor(){
@@ -70,36 +71,23 @@ class Dashboard extends Component {
 			return <div className="Dashboard" key={i}>
 					{this.state.editnumber===i && this.state.edit
 					?	//edit toggled on
-					<>
-						<button onClick={this.cancelEdit}>Cancel</button>
-						<form onSubmit={(e)=>{
-							e.preventDefault()
-							this.onSubmit(e,taco.taco_id)}}>
-							<p>Quantity</p>
-							<input name="quantity" onChange={this.onChange} value={this.state.quantity} type="number" ></input>
-							<p>From</p>
-							<input name="source" onChange={this.onChange} value={this.state.source} type="text" ></input>
-							<p>Description</p>
-							<input name="description" onChange={this.onChange} value={this.state.description} type="text" ></input>
-							<p>Rating</p>
-							<input onChange={this.onChange} value={this.state.rating} type="range" min="1" max="5" name="rating" list="ratinglist"></input>
-							<button>Submit</button>
-						</form>
-						<datalist id="ratinglist">
-							<option value="1" />
-							<option value="2" />
-							<option value="3" />
-							<option value="4" />
-							<option value="5" />
-						</datalist>
-					</>
+					<EditTaco 
+						cancelEdit={this.cancelEdit}
+						onSubmit={this.onSubmit}
+						onChange={this.onChange}
+						taco={taco}
+						quantity={this.state.quantity}
+						source={this.state.source}
+						description={this.state.description}
+						rating={this.state.rating}
+					/>
 					:	//edit toggled off
 					<TacoCard taco={taco} i={i} toggleEdit={this.toggleEdit}/>
 					}
 				</div>;
 		})
 		return (
-			<div className="container">
+			<div className="body">
 				{map}
 			</div>
 		);

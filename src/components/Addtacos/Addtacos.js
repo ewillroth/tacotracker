@@ -31,7 +31,7 @@ class Addtacos extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="body">
 				<form onSubmit={this.onSubmit}>
 					<p>Quantity</p>
 					<input name="quantity" onChange={this.onChange} value={this.state.quantity} type="number" required></input>

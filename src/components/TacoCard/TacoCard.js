@@ -5,7 +5,7 @@ import Quantity from '../Quantity/Quantity';
 const TacoCard = props => {
 	let {taco, i, toggleEdit} = props
 	return (
-		<div>
+		<div className="tacoCard">
 			<Quantity quantity={taco.quantity} />
 			<Rating rating={taco.rating} />
 			<div className="description">{taco.description}</div>

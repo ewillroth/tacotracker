@@ -4,7 +4,7 @@ import "./Userpage.css";
 class Userpage extends Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="body">
 				<h2>Userpage</h2>
 			</div>
 		);
