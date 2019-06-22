@@ -1,4 +1,5 @@
 import React from 'react';
+import './EditTaco.css'
 
 const EditTaco = props => {
 	const onSubmit = e => {
@@ -6,8 +7,7 @@ const EditTaco = props => {
 		props.onSubmit(e, props.taco.taco_id)
 	}
 	return (
-		<>
-			<button onClick={props.cancelEdit}>Cancel</button>
+		<div className="editTaco">
 			<form onSubmit={onSubmit}>
 				<p>Quantity</p>
 				<input 
@@ -21,15 +21,18 @@ const EditTaco = props => {
 					name="source" 
 					onChange={props.onChange} 
 					value={props.source} 
+					autoComplete="off"
 					type="text" >
 				</input>
 				<p>Description</p>
-				<input 
+				<textarea 
 					name="description" 
 					onChange={props.onChange} 
 					value={props.description} 
-					type="text" >
-				</input>
+					rows="6"
+					cols="40"
+					autoComplete="off">
+				</textarea>
 				<p>Rating</p>
 				<input 
 					onChange={props.onChange} 
@@ -39,7 +42,10 @@ const EditTaco = props => {
 					name="rating" 
 					list="ratinglist">
 				</input>
-				<button>Submit</button>
+				<div>
+					<button onClick={props.cancelEdit}>Cancel</button>
+					<button>Submit</button>
+				</div>
 			</form>
 			<datalist id="ratinglist">
 				<option value="1" />
@@ -48,7 +54,7 @@ const EditTaco = props => {
 				<option value="4" />
 				<option value="5" />
 			</datalist>
-		</>
+		</div>
 	)
 }
 

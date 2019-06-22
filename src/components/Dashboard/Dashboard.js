@@ -64,14 +64,12 @@ class Dashboard extends Component {
 			editnumber: ''
 		})
 	}
-		//return three different views depending on req.session (no user, user, admin)
-		//admin view
+
 	render(){
 		const map = this.state.tacos.map((taco,i)=>{
-			return <div className="Dashboard" key={i}>
-					{this.state.editnumber===i && this.state.edit
-					?	//edit toggled on
-					<EditTaco 
+				if(this.state.editnumber===i && this.state.edit){
+					return <EditTaco
+						key={i}
 						cancelEdit={this.cancelEdit}
 						onSubmit={this.onSubmit}
 						onChange={this.onChange}
@@ -81,11 +79,12 @@ class Dashboard extends Component {
 						description={this.state.description}
 						rating={this.state.rating}
 					/>
-					:	//edit toggled off
-					<TacoCard taco={taco} i={i} toggleEdit={this.toggleEdit}/>
-					}
-				</div>;
+				}
+				else {
+					return <TacoCard taco={taco} key={i} i={i} toggleEdit={this.toggleEdit} />
+				}
 		})
+
 		return (
 			<div className="body">
 				{map}

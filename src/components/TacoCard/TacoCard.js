@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from '../Rating/Rating';
 import Quantity from '../Quantity/Quantity';
+import './TacoCard.css'
 
 const TacoCard = props => {
 	let {taco, i, toggleEdit} = props
