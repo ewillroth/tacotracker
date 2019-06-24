@@ -2,7 +2,7 @@
 
 ### About
 
-In 2018, I ate 280 tacos. At the beginning of the year, I had friends guess how many tacos they thought I would eat that year and promised free tacos to the closest guesser. Taco Tracker is a tool for tracking taco consumption. 
+In 2018, I ate 280 tacos. At the beginning of the year, I had friends guess how many tacos they thought I would eat that year and promised free tacos to the closest guesser. Taco Tracker is a tool for tracking taco consumption.
 
 ### Features
 
@@ -19,6 +19,8 @@ Node
 Express
 
 Firebase
+
+Postgres
 
 ### License
 [MIT](https://choosealicense.com/licenses/mit/)
