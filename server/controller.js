@@ -1,4 +1,3 @@
-
 const addTacos = (req,res,next) => {
 	req.app.get("db").addTacos([req.body.quantity, +req.body.rating, req.body.description, req.body.source])
 	.then(response => res.status(200).json(response))
@@ -29,12 +28,10 @@ const countTacos = (req,res,next) => {
 const getUser = (req,res,next) => {
 	res.send(req.session.user?req.session.user:{name: 'guest'})
 }
-
 const updateUser = (req,res,next) => {
 	req.session.user = req.body.user
 	res.send(req.session.user)
 }
-
 const logout = (req,res,next) => {
 	req.session.destroy()
 	res.status(200).send('Logout successful')
