@@ -34,6 +34,7 @@ const User = props => {
 				<p>{props.user.displayName}</p>
 				<h3>Day of the year: {day}</h3>
 				<h3>Taco Count: {count}</h3>
+				<button onClick={props.logout}>Logout</button>
 		</div>
 		</div>
 	)

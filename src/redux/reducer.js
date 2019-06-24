@@ -1,18 +1,10 @@
 //initial state
 const initialState = {
 	tacos: [],
-	name: '',
-	username: '',
-	guess: '',
-	password: ''
 }
 
 //action types
 const GET_TACOS = "GET_TACOS"
-const UPDATE_NAME = "UPDATE_NAME"
-const UPDATE_USERNAME = "UPDATE_USERNAME"
-const UPDATE_GUESS = "UPDATE_GUESS"
-const UPDATE_PASSWORD = "UPDATE_PASSWORD"
 const UPDATE_QUANTITY = "UPDATE_QUANTITY"
 const UPDATE_RATING = "UPDATE_RATING"
 const UPDATE_DESCRIPTION = "UPDATE_DESCRIPTION"
@@ -24,30 +16,6 @@ export const getTacos = (tacos) => {
 	return {
 		type: GET_TACOS,
 		payload: tacos
-	}
-}
-export const updateName = (name) => {
-	return {
-		type: UPDATE_NAME,
-		payload: name
-	}
-}
-export const updateUsername = (username) => {
-	return {
-		type: UPDATE_USERNAME,
-		payload: username
-	}
-}
-export const updateGuess = (guess) => {
-	return {
-		type: UPDATE_GUESS,
-		payload: guess
-	}
-}
-export const updatePassword = (password) => {
-	return {
-		type: UPDATE_PASSWORD,
-		payload: password
 	}
 }
 export const updateQuantity = (quantity) => {
@@ -88,26 +56,6 @@ function reducer(state = initialState, action) {
 			return {
 				...state,
 				tacos: action.payload
-			};
-		case UPDATE_NAME:
-			return {
-				...state,
-				name: action.payload
-			};
-		case UPDATE_USERNAME:
-			return {
-				...state,
-				username: action.payload
-			};
-		case UPDATE_GUESS:
-			return {
-				...state,
-				guess: action.payload
-			};
-		case UPDATE_PASSWORD:
-			return {
-				...state,
-				password: action.payload
 			};
 		case UPDATE_QUANTITY:
 			return {

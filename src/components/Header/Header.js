@@ -13,6 +13,7 @@ class Header extends Component{
 			user: ''
 		}
 		this.login = this.login.bind(this)
+		this.logout = this.logout.bind(this)
 	}
 
 	login(){
@@ -46,7 +47,7 @@ class Header extends Component{
 	logout(){
 		axios.get('/api/logout').then(response=>{
 			console.log(response)
-			this.setState({user:'guest'})
+			this.setState({user:{name:'guest'}})
 		}).catch(err=>{
 			console.log(err)
 		})
@@ -58,13 +59,11 @@ class Header extends Component{
 			if(response.data.name !== 'guest'){
 				console.log(response.data)
 			}
-			//store current user data in state
 			this.setState({user: response.data})
 		})
 		.catch(err=>console.log(err))
 	}
 	
-	//return three different views depending on req.session (no user, user, admin)
 	render(){
 		return (
 			this.state.user.name === 'guest' ?
@@ -92,12 +91,10 @@ class Header extends Component{
 					<Link to="/">Taco Tracker</Link>
 				</div>
 				<div className="admincontrols">
-					<Link to="/userpage">View Users</Link>
 					<Link to="/addtacos">Eat Tacos</Link>
-					<button onClick={this.logout}>Logout</button>
 				</div>
 				<div className="usercontrols">
-					<User user={this.state.user}/>
+					<User logout={this.logout} user={this.state.user}/>
 				</div>
 			</div>
 		);
