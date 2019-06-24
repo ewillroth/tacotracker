@@ -90,10 +90,10 @@ class Header extends Component{
 					/>
 					<Link to="/">Taco Tracker</Link>
 				</div>
-				<div className="admincontrols">
+				<div>
 					<Link to="/addtacos">Eat Tacos</Link>
 				</div>
-				<div className="usercontrols">
+				<div>
 					<User logout={this.logout} user={this.state.user}/>
 				</div>
 			</div>

@@ -32,15 +32,40 @@ class Addtacos extends Component {
 	render() {
 		return (
 			<div className="body">
-				<form onSubmit={this.onSubmit}>
+				<form className="addTacoForm" onSubmit={this.onSubmit}>
 					<p>Quantity</p>
-					<input name="quantity" onChange={this.onChange} value={this.state.quantity} type="number" required></input>
+					<input 
+						name="quantity" 
+						onChange={this.onChange}
+						value={this.state.quantity}
+						type="number" required>
+					</input>
 					<p>From</p>
-					<input name="source" onChange={this.onChange} value={this.state.source} type="text" required></input>
+					<input 
+						name="source" 
+						onChange={this.onChange}
+						autoComplete="off"
+						value={this.state.source}
+						type="text" required>
+					</input>
 					<p>Description</p>
-					<input name="description" onChange={this.onChange} value={this.state.description} type="text" required></input>
+					<textarea 
+						name="description" 
+						onChange={this.onChange}
+						value={this.state.description}
+						rows="6"
+						cols="40"
+						autoComplete="off"
+						type="text" required>
+					</textarea>
 					<p>Rating</p>
-					<input onChange={this.onChange} value={this.state.rating} type="range" min="1" max="5" name="rating" list="ratinglist" required></input>
+					<input 
+						onChange={this.onChange}
+						value={this.state.rating}
+						type="range" min="1" max="5"
+						name="rating"
+						list="ratinglist" required>
+					</input>
 					<button>Submit</button>
 				</form>
 				<datalist id="ratinglist">
