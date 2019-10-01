@@ -69,13 +69,13 @@ class Header extends Component{
 			this.state.user.name === 'guest' ?
 			//no user view
 			<div className="Header">
-				<div className="titlebox">
+				<Link className="titlebox" to="/">
 					<img
 						src="https://image.flaticon.com/icons/svg/579/579028.svg"
 						alt="taco"
 					/>
-					<Link to="/">Taco Tracker</Link>
-				</div>
+					<p>Taco Tracker</p>
+				</Link>
 				<div>
 					<button onClick={this.login}>Login with Google</button>
 				</div>

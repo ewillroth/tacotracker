@@ -14,11 +14,11 @@
 
 .titlebox {
 	display: flex;
-	height: 100%;
+	height: 80%;
 	align-items: center;
 }
 
 .titlebox img {
-	height: 80%;
+	height: 100%;
 	margin: 0px 5px;
 }
