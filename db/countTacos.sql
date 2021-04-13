@@ -1,1 +1,0 @@
-SELECT count(*) FROM tacos WHERE user_id = $1
