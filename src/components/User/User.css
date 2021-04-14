@@ -13,3 +13,7 @@
 .user {
 	display: flex;
 }
+
+.logoutButton {
+	margin-top: 4px;
+}
