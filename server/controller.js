@@ -56,7 +56,7 @@ const countTacos = async (req, res, next) => {
 	//replace id with proper user_id on req.session.user once added
 	const id = req.session.user ? req.session.user.uid : 0;
 	try {
-		const response = await req.app.get('db').any('SELECT count(*) FROM tacos WHERE user_id = $1', [id]);
+		const response = await req.app.get('db').any('SELECT sum(quantity) FROM tacos WHERE user_id = $1', [id]);
 		res.status(200).json(response);
 	} catch (err) {
 		res.status(400).json({ error: err });

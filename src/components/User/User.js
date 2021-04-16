@@ -12,7 +12,7 @@ const User = (props) => {
 
 		axios
 			.get('/api/tacocount', { cancelToken: source.token })
-			.then((response) => updateCount(response.data[0].count))
+			.then((response) => updateCount(response.data[0].sum))
 			.catch((err) => {
 				if (axios.isCancel(err)) {
 					console.log('Request cancelled', err.message);
@@ -27,15 +27,11 @@ const User = (props) => {
 	};
 
 	useEffect(getTacoCount, []);
-
-	const today = new Date();
-	const day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
 	return (
 		<div className='user'>
 			<img className='profilepic' src={props.user.photoURL} alt='user' />
 			<div className='userText'>
 				<p>{props.user.displayName}</p>
-				<h3>Day of the year: {day}</h3>
 				<h3>Tacos Eaten: {count}</h3>
 				<Button className='logoutButton' onClick={props.logout}>
 					Logout
