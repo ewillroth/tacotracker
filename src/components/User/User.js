@@ -36,7 +36,7 @@ const User = (props) => {
 			<div className='userText'>
 				<p>{props.user.displayName}</p>
 				<h3>Day of the year: {day}</h3>
-				<h3>Taco Count: {count}</h3>
+				<h3>Tacos Eaten: {count}</h3>
 				<Button className='logoutButton' onClick={props.logout}>
 					Logout
 				</Button>

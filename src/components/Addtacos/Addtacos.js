@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Addtacos.css';
+import { Redirect } from 'react-router';
 
 class Addtacos extends Component {
 	constructor() {
@@ -10,6 +11,7 @@ class Addtacos extends Component {
 			source: '',
 			description: '',
 			rating: 3,
+			redirect: false,
 		};
 	}
 
@@ -27,7 +29,8 @@ class Addtacos extends Component {
 					quantity: 0,
 					source: '',
 					description: '',
-					rating: '',
+					rating: 3,
+					redirect: true,
 				})
 			)
 			.catch((err) => console.log(err));
@@ -36,6 +39,7 @@ class Addtacos extends Component {
 	render() {
 		return (
 			<div className='body'>
+				{this.state.redirect && <Redirect to='/' />}
 				<form className='addTacoForm' onSubmit={this.onSubmit}>
 					<p>Quantity</p>
 					<input name='quantity' onChange={this.onChange} value={this.state.quantity} type='number' required />
