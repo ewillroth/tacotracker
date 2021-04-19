@@ -1,7 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './Addtacos.css';
 import { Redirect } from 'react-router';
+import Input from '../Input/Input.tsx';
 
 const Addtacos = () => {
 	const [state, setState] = useState({
@@ -38,9 +39,9 @@ const Addtacos = () => {
 			{state.redirect && <Redirect to='/' />}
 			<form className='addTacoForm' onSubmit={onSubmit}>
 				<p>Quantity</p>
-				<input name='quantity' onChange={onChange} value={state.quantity} type='number' required />
+				<Input name='quantity' onChange={onChange} value={state.quantity} type='number' required />
 				<p>From</p>
-				<input name='source' onChange={onChange} autoComplete='off' value={state.source} type='text' required />
+				<Input name='source' onChange={onChange} autoComplete='off' value={state.source} type='text' required />
 				<p>Description</p>
 				<textarea
 					name='description'
@@ -53,7 +54,7 @@ const Addtacos = () => {
 					required
 				/>
 				<p>Rating</p>
-				<input onChange={onChange} value={state.rating} type='range' min='1' max='5' name='rating' list='ratinglist' required />
+				<Input onChange={onChange} value={state.rating} type='range' min='1' max='5' name='rating' list='ratinglist' required />
 				<button>Submit</button>
 			</form>
 			<datalist id='ratinglist'>
