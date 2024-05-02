@@ -4,7 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"auth0-js": "^9.13.2",
-		"axios": "^0.21.1",
+		"axios": "^0.28.0",
 		"bcryptjs": "^2.4.3",
 		"body-parser": "^1.18.3",
 		"dotenv": "^6.2.0",
